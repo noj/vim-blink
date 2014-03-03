@@ -21,6 +21,8 @@ syn keyword blinkType nanotime
 syn keyword blinkType millitime
 syn keyword blinkType bool
 syn keyword blinkType string
+syn match blinkType "binary\(\s*([[:digit:]]\+)\)\?"
+syn match blinkType "fixed\s*([[:digit:]]\+)"
 syn keyword blinkType object
 
 " Keywords
@@ -42,12 +44,27 @@ syn match blinkNumber "\<\d\+\>"
 syn match blinkTodo "[tT][oO][dD][oO]" contained
 syn match blinkComment "#.*$" contains=blinkTodo
 
+" Annotations
+syn region blinkAnnotation start="@.*=\"" end=+"+
+syn match blinkAnnotation "<-"
+
+" Standard Type Library types
+syn keyword blinkStandardLibraryTypes uuid
+syn keyword blinkStandardLibraryTypes xml
+syn keyword blinkStandardLibraryTypes bigInt
+syn keyword blinkStandardLibraryTypes bigDec
+syn keyword blinkStandardLibraryTypes ipv4Addr
+syn keyword blinkStandardLibraryTypes ipv6Addr
+
+" Link highlighting
 hi link blinkType Type
 hi link blinkKeyword Keyword
 hi link blinkNumber Number
 hi link blinkComment Comment
+hi link blinkAnnotation SpecialComment
 hi link blinkTodo Todo
 hi link blinkOperator Operator
+hi link blinkStandardLibraryTypes Typedef
 
 let b:current_syntax = "blink"
 

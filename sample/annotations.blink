@@ -1,0 +1,30 @@
+@doc="An annotated group definition"
+Group1 ->
+    string Text
+    binary(42) apa
+    binary Tjonk
+    fixed (8) Banan
+
+Group2 ->
+    @doc="An annotated type" string Text
+
+Group3 ->
+    string @doc="An annotated field" Text
+
+@doc="Initiates a session"
+@code:class="Session::Logon"
+Logon -> string User, string Password
+
+@long="The quick brown fox"
+ "jumps over the lazy dog"
+
+Msg <- 4711 <- @doc="A simple message"
+Msg.Payload <- @doc="The data"
+
+# Equals:
+@doc="A simple message"
+Msg/4711 -> string @doc="The data" Payload
+
+ipv4Addr = @blink:type="IPv4Addr" fixed(4)
+
+
