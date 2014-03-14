@@ -1,4 +1,4 @@
-" Blink syntax file
+" Blink schema syntax file
 " Language  : Blink (http://blinkprotocol.org)
 " Maintainer: Jon Olsson
 
@@ -66,5 +66,5 @@ hi link blinkTodo Todo
 hi link blinkOperator Operator
 hi link blinkStandardLibraryTypes Typedef
 
-let b:current_syntax = "blink"
+let b:current_syntax = "blink-schema"
 
