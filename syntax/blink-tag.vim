@@ -15,11 +15,15 @@ syn match blinkTag "[_a-zA-Z][_a-zA-Z0-9]\+="
 syn match blinkDecNumber display "\<-\?[0-9]\+\>"
 syn match blinkHexNumber display "\<[0-9a-fA-F]\+\>"
 
+syn match blinkTodo "[tT][oO][dD][oO]" contained
+syn match blinkComment "#.*$" contains=blinkTodo
+
 " Link highlighting
-hi link blinkType Type
-hi link blinkTag Identifier
+hi link blinkComment Comment
 hi link blinkDecNumber Number
 hi link blinkHexNumber Number
+hi link blinkTag Identifier
+hi link blinkType Type
 
 let b:current_syntax = "blink-tag"
 
