@@ -1,5 +1,5 @@
 " Blink schema syntax file
-" Language  : Blink (http://blinkprotocol.org)
+" Language  : Blink Schema (http://blinkprotocol.org)
 " Maintainer: Jon Olsson
 
 if version < 600

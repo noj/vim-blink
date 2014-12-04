@@ -1,5 +1,5 @@
 " Blink tag format syntax highlighting
-" Language  : Blink (http://blinkprotocol.org)
+" Language  : Blink tag format (http://blinkprotocol.org)
 " Maintainer: Jon Olsson
 
 if version < 600
