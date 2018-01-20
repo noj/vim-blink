@@ -25,6 +25,10 @@ syn match   blinkType "binary\(\s*([[:digit:]]\+)\)\?"
 syn match   blinkType "fixed\s*([[:digit:]]\+)"
 syn keyword blinkType object
 
+" Literal strings
+syn region singleQuotedString start="'" end="'"
+syn region doubleQuotedString start="\"" end="\""
+
 " Keywords
 syn keyword blinkKeyword namespace
 syn keyword blinkKeyword schema
@@ -65,6 +69,8 @@ hi link blinkAnnotation             SpecialComment
 hi link blinkTodo                   Todo
 hi link blinkOperator               Operator
 hi link blinkStandardLibraryTypes   Typedef
+hi def link singleQuotedString      String
+hi def link doubleQuotedString      String
 
 let b:current_syntax = "blink-schema"
 
