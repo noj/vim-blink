@@ -21,6 +21,7 @@ syn keyword blinkType nanotime
 syn keyword blinkType millitime
 syn keyword blinkType bool
 syn keyword blinkType string
+syn keyword blinkType enum
 syn match   blinkType "binary\(\s*([[:digit:]]\+)\)\?"
 syn match   blinkType "fixed\s*([[:digit:]]\+)"
 syn keyword blinkType object
