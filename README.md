@@ -8,4 +8,4 @@ Syntax highlighting support for [Blink](http://blinkprotocol.org/) schemas.
 
 ## License
 
-BSD license, see COPYING.
+BSD license, see [COPYING](COPYING).
